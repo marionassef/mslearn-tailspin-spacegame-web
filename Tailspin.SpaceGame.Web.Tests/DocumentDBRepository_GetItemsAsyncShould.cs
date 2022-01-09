@@ -46,7 +46,6 @@ namespace Tests
                 MAX_RESULTS
             );
             IEnumerable<Score> scores = scoresTask.Result;
-
             // Verify that each score's game region matches the provided game region.
             Assert.That(scores, Is.All.Matches<Score>(score => score.GameRegion == gameRegion));
         }
